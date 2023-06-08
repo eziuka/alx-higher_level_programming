@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    import sys
+    from calculator_1 import add, sub, mul, div
 
-    length = len(sys.argv) - 1
-    msg = "arguments" if (length != 1) else "argument"
-    msg += "." if (length == 0) else ":"
-
-    print("{} {}".format(length, msg))
-    for index, arg in enumerate(sys.argv[1:]):
-        print("{}: {}".format(index + 1, arg))
+    a = 10
+    b = 5
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} - {} = {}".format(a, b, sub(a, b)))
+    print("{} * {} = {}".format(a, b, mul(a, b)))
+    print("{} / {} = {}".format(a, b, div(a, b))))
